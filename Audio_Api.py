@@ -91,8 +91,9 @@ class Podcast(db.Model):
 
     def __repr__(self):
     	return f"Audio(id = {self.id},name= {self.name}, time= {self.upload_time}, Duration= {self.duration} , Type = Podcast)"
-
-
+# Run this only the first time, then comment it out
+db.create_all()
+#---------------------------------------------------#
 class Upload_Audio_API(Resource): 
 	
 	def put(self):
